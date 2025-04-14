@@ -1,32 +1,32 @@
+import { IBrandState } from "../brands/index.types";
+import { ICategoriesState } from "../categories/index.types";
+
 export interface IGetProductByIdArgs {
   id: string;
 }
 
 // !! Product State
-export interface IGetProductState {
+export interface IProductState {
   _id: string;
   name: string;
   description: string;
   price: number;
-  category: {
-    _id: string;
-    name: string;
-    description: string;
-  };
+  category: ICategoriesState;
   stock: number;
   discount: number;
   rating: number;
   image: string;
-  brand: string;
+  brand: IBrandState;
   sales: number;
   createdAt: string;
   updatedAt: string;
+  technicalSpecifications: ITechnicalSpecificationsState[];
 }
 
 // !! Product By Id
 export interface IGetProductByIdResponse {
   data: {
-    product: IGetProductState;
+    product: IProductState;
   };
   error: any;
   message: string;
@@ -38,10 +38,16 @@ export interface IGetProductsResponse {
     totalProducts: number;
     totalPages: number;
     currentPage: number;
-    products: IGetProductState[];
+    products: IProductState[];
     next: number | null;
     prev: number | null;
   };
   error: any;
   message: "محصولات با موفقیت دریافت شدند";
+}
+
+export interface ITechnicalSpecificationsState {
+  key: string;
+  value: string;
+  _id: string;
 }

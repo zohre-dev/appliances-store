@@ -1,9 +1,17 @@
+export type ISortbyFilterState =
+  | "rating"
+  | "sales"
+  | "stock"
+  | "newest"
+  | "discounted";
+
 export interface IGetProductProps {
   category?: string;
   page?: number;
   limit?: number;
-  search?: string;
+  name?: string;
   minPrice?: number;
   maxPrice?: number;
-  sortBy?: "rating" | "sales" | "stock" | "newest" | "discounted";
+  sortby?: ISortbyFilterState;
+  brand?: string;
 }

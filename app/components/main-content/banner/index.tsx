@@ -1,7 +1,4 @@
-import {
-  ImgContainer,
-  loadImageFun,
-} from "@/app/lib/design/common/img-container";
+import { ImgContainer } from "@/app/lib/design/common/img-container";
 import { IProps } from "./index.types";
 import Image from "@/public/images/p-25-min.png";
 import { Title } from "@/app/lib/design/common/title";

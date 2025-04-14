@@ -14,7 +14,10 @@ export const loadImageFun = ({
 };
 export const ImgContainer: FC<IProps> = ({ classes, src }) => {
   return (
-    <div className={`relative ${classes}`} style={{ border: "2px solid blue" }}>
+    <div
+      className={`relative ${classes}`}
+      style={{ border: "2px solid yellow" }}
+    >
       <Image
         src={src}
         loader={loadImageFun}

@@ -4,13 +4,12 @@ import { LinkContainer } from "../link-container";
 import * as Icons from "react-icons/fa";
 import { cn } from "@/app/lib/utils/cn";
 import { Text } from "../text";
-// import { FaShoppingCart } from 'react-icons/fa';
+import { ShoppingCartFullIcon } from "../icons";
 
 export const Cart: FC<IProps> = ({ itemsCount = 0, className }) => {
   return (
     <LinkContainer href="./" classes={cn("relative cursor-pointer", className)}>
-      {/* <FaShoppingCart size={24} className="text-white" /> */}
-      <Icons.FaShoppingCart size={24} className="text-white" />
+      <ShoppingCartFullIcon />
       {itemsCount > 0 && (
         <Text
           as="span"

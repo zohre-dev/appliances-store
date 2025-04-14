@@ -10,7 +10,14 @@ const SectionSlider: FC<IProps> = ({
   spaceBetween = 15,
   autoplayDelay = 1800,
   className = "",
+  enableNavigation = true,
   children,
+  breakpoints = {
+    320: { slidesPerView: 1 },
+    640: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 4 },
+  },
 }) => {
   return (
     <>
@@ -26,14 +33,9 @@ const SectionSlider: FC<IProps> = ({
           }}
           modules={[Pagination, Navigation, Autoplay]}
           loop
-          navigation={true}
+          navigation={enableNavigation}
           className={cn(`Swiper`, className)}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-          }}
+          breakpoints={breakpoints}
         >
           {children}
         </Swiper>

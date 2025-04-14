@@ -5,7 +5,7 @@ interface IProps {
   href: string;
 }
 
-export const headerMenuItems: IProps[] = [
+export const items: IProps[] = [
   {
     title: "صفحه اصلی",
     href: URLS.home,

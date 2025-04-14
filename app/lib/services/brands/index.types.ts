@@ -1,4 +1,4 @@
-export interface BrandState {
+export interface IBrandState {
   _id: string;
   name: string;
   description: string;
@@ -8,7 +8,7 @@ export interface BrandState {
 }
 
 export interface IGetBrandsResponse {
-  data: BrandState[];
+  data: IBrandState[];
   error: any;
   message: string;
 }
